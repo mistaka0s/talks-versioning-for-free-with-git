@@ -267,5 +267,55 @@ What's wrong with these strategies?
 ]
 
 .right-column[
-The version is not derived from source code 
+The problem?
+
+- They're trying to be source of truth for versioning with no real interaction with SCM.
+
+- Build tools are usually not flexible enough and try to be too many things.
+
+- CI tool is another place where developers need to touch.
+
+- The version is not derived from source code and so extra logic and state must be maintained with the build tool.
+]
+
+---
+class: center, middle, inverse
+# Versioning with .fa[.fa-git-square[]].
+
+---
+
+class: middle
+name: how
+.left-column[
+Versioning with GIT.
+]
+
+.right-column[
+With `git` every commit you make generates a unique GIT .
+
+But don't do this.
+<artifactory screenshot>
+
+
+]
+
+---
+class: center, middle, inverse
+# Leverage Git tags instead
+
+---
+
+class: middle
+name: how
+.left-column[
+Versioning with GIT.
+]
+
+.right-column[
+With .fa[.fa-git-square[]] every commit generates a unique SHA-1.
+
+But don't do this.
+<artifactory screenshot>
+
+
 ]
