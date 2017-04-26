@@ -35,7 +35,7 @@
         border-radius: 5px;
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-      .remark-code-line-highlighted     { background-color: #373832; }
+      .remark-code-line-highlighted     { background-color: red; }
       .pull-left {
         float: left;
         width: 47%;
@@ -97,6 +97,11 @@
         background: #fff;
         z-index: 0;
       }
+
+      #slide-why .slides .content pre code {
+        font-size: 0.9em;
+        word-wrap: pre-wrap;
+      }
       /* Two-column layout */
       .left-column {
         color: #777;
@@ -124,6 +129,7 @@
         ratio: '4:3',
         highlightLanguage: 'markdown',
         highlightStyle: 'zenburn',
+        highlightLines: 'true'
       });
     </script>
   </body>

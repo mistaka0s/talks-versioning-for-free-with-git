@@ -291,31 +291,97 @@ Versioning with GIT.
 ]
 
 .right-column[
-With `git` every commit you make generates a unique GIT .
+With `git` every commit you make generates a unique SHA.
 
-But don't do this.
-<artifactory screenshot>
+```
+*commit 10c5d8750aa2745582d3065c9e5da3de5a6ac4b6
+Author: Chao Luan <mistaka0s@users.noreply.github.com>
+Date:   Tue Apr 25 21:45:38 2017 +1000
 
+    Latest version
+```
 
+The commit SHA is commonly shortened to 8 characters:
+`10c5d875` is equivalent to `10c5d8750aa2745582d3065c9e5da3de5a6ac4b6`
+
+But don't do this: `<version>.<git_sha>`
+
+You can't tell which version is later.
+```
+0.1.62d0491
+0.1.63cc0cd
+0.1.1280e0a
+0.1.aae79fc
+0.1.38a942c
+0.1.97cc06c
+0.1.2a34c52
+0.1.894fe7a
+```
 ]
+
+???
+SHAs in example are actually commits in order (latest first)
 
 ---
 class: center, middle, inverse
 # Leverage Git tags instead
 
 ---
-
 class: middle
-name: how
+name: why
 .left-column[
-Versioning with GIT.
+Leverage Git Tags
 ]
 
 .right-column[
-With .fa[.fa-git-square[]] every commit generates a unique SHA-1.
+You can `tag` a commit within git and give it a more friendly to read name.
 
-But don't do this.
-<artifactory screenshot>
+Think about it as a symlink or alias to an actual commit SHA.
 
+```
+$  git tag -l
+0.0.1
+0.1.0
+0.1.1
+0.1.10
+0.1.11
+0.1.12
+0.1.2
+0.1.3
+0.1.4
+0.1.5
+0.1.6
+0.1.7
+0.1.8
+0.1.9
+```
+
+
+]
+
+---
+class: center, middle, inverse
+# Does that mean you have to tag every commit?
+
+---
+class: middle
+name: why
+.left-column[
+Tag every commit?
+]
+
+.right-column[
+No, definitely not.
+
+Use `git describe --tags`!
+
+> The command `finds the most recent tag` that is reachable from a commit. `If the tag points to the commit, then only the tag is shown`. Otherwise, it suffixes the `tag name with the number of additional commits on top of the tagged object` and the `abbreviated object name of the most recent commit`.
+
+
+TL;DR:
+
+If on a `tag`, return `tag`.
+
+If not, return `<tagz.`-`# commits`-g`SHA`
 
 ]
