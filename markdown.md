@@ -27,10 +27,17 @@ Who am I?
 ]
 .right-column[.middle[
 - 15 years in IT, working in consultancies.
+
 - Systems Admin background
+
 - Middleware/Build Engineer ~ 2009
+
 - Systems automation since 2010.
+
 - Building platforms since then.
+
+- Home keys: aoeu htns (Yes I use Dvorak)
+  ![dvorak](images/dvorak.png)
 ]]
 
 ---
@@ -44,11 +51,17 @@ Agenda
 ]
 .right-column[
 1. Why Version
+
 2. Common versioning strategies.
+
 3. Git Tags
+
 4. Unique versioning
+
 5. Demo
+
 6. Applications and things you need to consider.
+
 ]
 
 ---
@@ -66,17 +79,25 @@ Why Version?
 The reasons why you should version your code releases are many.
 
 * Release management
+
 * A way of describing the maturity of your code
+
 * Use it to manage depenedencies.
+
 * Produce artifacts
+
 * Auditability
+
 * Debug
 ]
 --
 count: false
 .right-column[
 * .red[ Be reproducible]
+
 * .red[ Be able to trace back the release of an artifact back to source code ]
+
+* many more...
 
 If you aren't versioning your code, you really should be.
 ]
@@ -99,7 +120,9 @@ These seem to arise from being able to build unique versions of artifacts for CI
 Things I've seen out in the wild are:
 
 - Date/Time versioning - version `201704211049`
+
 - Build # derived versioning - version `build#`
+
 - Semver, but controled by CI tool - `1.2.4`
 
 ]
@@ -377,11 +400,41 @@ Use `git describe --tags`!
 
 > The command `finds the most recent tag` that is reachable from a commit. `If the tag points to the commit, then only the tag is shown`. Otherwise, it suffixes the `tag name with the number of additional commits on top of the tagged object` and the `abbreviated object name of the most recent commit`.
 
+## TL;DR:
 
-TL;DR:
+### If on a `tag`, return `tag`.
 
-If on a `tag`, return `tag`.
+### If not, return `<tag>.`-`# commits`-g`SHA`
 
-If not, return `<tagz.`-`# commits`-g`SHA`
 
+]
+
+---
+class: center, middle, inverse
+# Demo time!
+
+---
+class: center, middle
+
+# Demo
+
+---
+class: center, middle, inverse
+# In Practice
+
+
+
+
+---
+class: center, middle, inverse
+# Tips & Tricks
+
+---
+class: middle
+name: how
+.left-column[
+Tips & Tricks]
+
+.right-column[
+- Tag off 
 ]
