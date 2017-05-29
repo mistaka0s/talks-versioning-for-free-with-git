@@ -105,6 +105,7 @@ If you aren't versioning your code, you really should be.
 ---
 class: center, middle, inverse
 # Common versioning strategies
+
 ---
 class: middle
 name: how
@@ -126,6 +127,11 @@ Things I've seen out in the wild are:
 - Semver, but controled by CI tool - `1.2.4`
 
 ]
+
+---
+class: center, middle, inverse
+# Common versioning strategies
+## Date/Time versioning
 
 ---
 class: middle
@@ -187,12 +193,16 @@ Hard to read:
 
 Repeatability:
 - Have to force the date somehow, but if you do that, you make the system less trustworthy.
+---
+class: center, middle, inverse
+# Common versioning strategies
+## Build versions from CI
 
 ---
 class: middle
 name: how
 .left-column[
-Build versions from CI.
+Build versions from CI
 ]
 
 .right-column[
@@ -226,13 +236,13 @@ Easy to generate:
 class: middle
 name: how
 .left-column[
-Build versions from CI.
+Build versions from CI
 ]
+.right-column[
 Usually versioned by taking something then appending the build number at the end.
 
 `<arbitrary version>-<build-number>`
 
-.right-column[
 
 *Cons:*
 - Versioning is tied to the build server .red[.fa[.fa-minus-circle[]]]
@@ -254,6 +264,10 @@ What if it's down?
 Concepts of code maturity isn't there:
 - How do you account for feature builds?
 
+---
+class: center, middle, inverse
+# Common versioning strategies
+## Semantic versioning from CI
 
 ---
 class: middle
@@ -266,11 +280,17 @@ Semantic Versioning from CI
 Has the same `pros` and `cons` with the build numbers in CI.
 
 But:
+
 - requires the developer or build engineer to maintain the build
 
 - logic and semantic versioning within the build tool.
 
+- Things are pushed in both directions
+  + Build artifacts
+  + Any tags or changes back to SCM.
+
 Compounded by:
+
 - having multiple release branches
 
 - when feature builds are built as well.
@@ -438,7 +458,7 @@ Tips & Tricks]
 
 - Output of `git describe` is not automatically semver compliant.
     + Some manipulation is needed in order to do so.
-    + Ruby GEM, NodeJS npms are adhere to semver specs
+    + Ruby GEM, NodeJS npms adhere to semver specs
 
 - Be aware of how your languages treat versions.
     + RPMs treat `-` as a delimiter between `version` and `release` fields in the RPM. So you can only use - once.
@@ -448,20 +468,9 @@ Tips & Tricks]
 class: center, middle, inverse
 # Summary
 
----
-class: middle
-name: how
-.left-column[
-Summary]
+With `git-tags` and `git-describe` you get an in-built
 
-.right-column[
-### With `git-describe`
-### you get
-### an inbuilt way of
-### uniquely versioning
-### every commit
-
-]
+and automatic way of versioning every commit made to your code.
 
 ---
 class: center, middle, inverse
