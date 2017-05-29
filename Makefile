@@ -14,7 +14,7 @@ present-local:
 
 .PHONY: demo
 demo:
-	pushd demo; bash demo.sh; popd
+	@pushd demo > /dev/null; bash demo.sh; popd > /dev/null
 
 .PHONY: clean
 clean:

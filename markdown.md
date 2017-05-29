@@ -416,14 +416,8 @@ class: center, middle, inverse
 ---
 class: center, middle
 
-# Demo
-
----
-class: center, middle, inverse
-# In Practice
-
-
-
+## DEMO!
+<asciinema-player src="/demo.json" cols="122" rows="30"></asciinema-player>
 
 ---
 class: center, middle, inverse
@@ -436,5 +430,41 @@ name: how
 Tips & Tricks]
 
 .right-column[
-- Tag off 
+- Tag off master/release or stable branches
+
+- If you're using FF merges, make sure you tag on the non-merge commit. (Git flow-esc techniques)
+
+    + so that it propagates back down to your other long living branches.
+
+- Output of `git describe` is not automatically semver compliant.
+    + Some manipulation is needed in order to do so.
+    + Ruby GEM, NodeJS npms are adhere to semver specs
+
+- Be aware of how your languages treat versions.
+    + RPMs treat `-` as a delimiter between `version` and `release` fields in the RPM. So you can only use - once.
 ]
+
+---
+class: center, middle, inverse
+# Summary
+
+---
+class: middle
+name: how
+.left-column[
+Summary]
+
+.right-column[
+### With `git-describe`
+### you get
+### an inbuilt way of
+### uniquely versioning
+### every commit
+
+]
+
+---
+class: center, middle, inverse
+# Questions?
+
+Feedback is welcome!
