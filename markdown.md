@@ -9,7 +9,8 @@ class: center, middle, inverse
 ???
 Opportunity to talk and share
 
-Something I picked up 5-6 years back, but want to share as I still don't see it being adopted.
+Something I picked up 5-6 years back, but want to share as I still don't see it being used and want to increase it's adoption.
+
 ---
 layout:false
 class: center, middle, inverse
@@ -48,6 +49,7 @@ Who am I?
 ---
 class: center, middle, inverse
 # Agenda
+
 ---
 class: middle
 
