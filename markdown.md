@@ -5,6 +5,11 @@ class: center, middle, inverse
 # Unique Versioning with .fa[.fa-git-square[]].
 
 .footnote[.pull-right[![odecee icon](http://odecee.com.au/wp-content/themes/odecee/library/images/logo-white.svg)]]
+
+???
+Opportunity to talk and share
+
+Something I picked up 5-6 years back, but want to share as I still don't see it being adopted.
 ---
 layout:false
 class: center, middle, inverse
@@ -68,6 +73,9 @@ Agenda
 class: center, middle, inverse
 # Why version your artifacts?
 
+???
+Being going into details on git tagging, would be good to review some of the reasons why we version.
+
 ---
 class: middle
 
@@ -100,11 +108,16 @@ count: false
 * many more...
 
 If you aren't versioning your code, you really should be.
+
 ]
 
 ---
 class: center, middle, inverse
 # Common versioning strategies
+
+???
+Over the past years, I've seen many ways of versioning artifacts but none I feel are better than `semantic versioning` (`semver`).
+
 
 ---
 class: middle
@@ -114,9 +127,6 @@ Versioning Strategies
 ]
 
 .right-column[
-Over the past years, I've seen many ways of versioning but none I feel are better than `semantic versioning` (`semver`).
-
-These seem to arise from being able to build unique versions of artifacts for CI implementations and while they solve some problems of versioning, it also causes other problems.
 
 Things I've seen out in the wild are:
 
@@ -127,6 +137,9 @@ Things I've seen out in the wild are:
 - Semver, but controled by CI tool - `1.2.4`
 
 ]
+
+???
+These seem to arise from needing to be able to build unique versions of artifacts for CI implementations and while they solve some problems of versioning, it also causes other problems.
 
 ---
 class: center, middle, inverse
@@ -193,6 +206,7 @@ Hard to read:
 
 Repeatability:
 - Have to force the date somehow, but if you do that, you make the system less trustworthy.
+
 ---
 class: center, middle, inverse
 # Common versioning strategies
@@ -319,6 +333,9 @@ The problem?
 - CI tool is another place where developers need to touch.
 
 - The version is not derived from source code and so extra logic and state must be maintained with the build tool.
+
+- No way to determine whether it's a release, hotfix, feature build.
+  + In some cases, can't even build off feature branches.
 ]
 
 ---
