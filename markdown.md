@@ -456,7 +456,7 @@ class: center, middle, inverse
 class: center, middle
 
 ## DEMO!
-<asciinema-player src="/demo.json" cols="122" rows="30"></asciinema-player>
+<asciinema-player src="demo.json" cols="122" rows="30"></asciinema-player>
 
 ---
 class: center, middle, inverse
